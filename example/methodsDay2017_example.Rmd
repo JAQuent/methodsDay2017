@@ -78,7 +78,7 @@ rValue <-function(x){
 
 
 
-# Your fancy formulars
+# Your fancy formulas
 You are able to create fancy formulars by innserting LaTex bits surrounded by $ signs. Today, we will use a correlation:
 $$r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}$$
 
