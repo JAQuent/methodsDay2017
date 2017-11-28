@@ -1,6 +1,6 @@
 ---
-title: "Using RMarkdown to create scientific manuscripts"
-author: "Jörn Alexander Quent"
+title: "Script for Using RMarkdown to create scientific manuscripts"
+author: "JÃ¶rn Alexander Quent"
 date: "28 November 2017"
 output: html_document
 ---
