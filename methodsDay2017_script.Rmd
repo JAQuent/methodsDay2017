@@ -2,7 +2,7 @@
 title: "Script for Using RMarkdown to create scientific manuscripts"
 author: "Jörn Alexander Quent"
 date: "28 November 2017"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
