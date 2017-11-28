@@ -1,5 +1,5 @@
 ---
-title: "Example for Using RMarkdown to create scientific manuscripts"
+title: "Example for using RMarkdown to create scientific manuscripts"
 author:
 - Jörn Alexander Quent
 date: "`r format(Sys.time(), '%B %d, %Y')`"
@@ -19,12 +19,89 @@ bibliography: references.bib
 csl: apa-5th-edition.csl
 ---
 
+```{r setup, include=FALSE}
+# This r chunk is used to set everything up. You can also analyse your data in here.
+# You need to load everything we need for analysis.
+# This includes the respective libraries
+library(knitr)
+library(ggplot2)
 
-#bla
-##bla
-###bla
+# Here is also the place where you can specify general settings.You need to load the library knitr to that first. 
+opts_knit$set(eval.after = 'fig.cap')
+# The next bit basically specifies that chunks are not echoed and that warnings, messages or plots/tables that are generated in chunk are not shown. 
+opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, include = FALSE)
 
-#Writing your text
-The nice thing about RMarkdown is that you can write the whole manuscript with that includes using citations. You can have the standard way of citing at the end of a sentence [@Quent2017a; @Quent2017b]. 
+
+# and of course the data.
+
+# In this case, we will load an example data set.
+data('cars')
+
+# This chunk is basically a R script. So you are also able to copy your own R function in here to use them. I copied two my functions (pValue and rValue) in here, which will later help to report the statistics. 
+pValue <-function(x, sign = '='){
+  if (inherits(x, "lm")){
+    s <- summary.lm(x)
+    x <- pf(s$fstatistic[1L], s$fstatistic[2L], s$fstatistic[3L], lower.tail = FALSE)
+    if(x > 1){
+      stop("There is no p-value greater than 1")
+    } else if(x < 0.001){
+      x.converted <- '< .001'
+    } else{
+      x.converted <- paste(sign,substr(as.character(round(x, 3)), 2,5))
+    } 
+  } else {
+    if(x > 1){
+      stop("There is no p-value greater than 1")
+    } else if(x < 0.001){
+      x.converted <- '< .001'
+    } else{
+      x.converted <- paste(sign,substr(as.character(round(x, 3)), 2,5))
+    } 
+  }
+  return(x.converted)
+}
+
+rValue <-function(x){
+  if (inherits(x, "lm")){
+    r.squared <- summary(x)$r.squared
+    x.converted <- paste('=',substr(as.character(round(r.squared, 3)), 2,5)) 
+  } else {
+    if (x < 0){
+      x.converted <- paste('= -',substr(as.character(abs(round(x, 3))), 2,5), sep = '') 
+    } else {
+      x.converted <- paste('=',substr(as.character(abs(round(x, 3))), 2,5)) 
+    }
+  }
+  return(x.converted) 
+}
+
+# You can do all of the analysis in this chunk, but you don't have to. 
+```
+
+
+
+# Your fancy formulars
+You are able to create fancy formulars by innserting LaTex bits surrounded by $ signs. Today, we will use a correlation:
+$$r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}$$
+
+##Analysis
+Use r chunks for your analysis and use the results later. 
+```{r}
+result <- cor.test(~ speed + dist, data = cars)
+```
+
+##Report your stats
+The loaded example data give the speed of cars and the distances taken to stop. The correlation between these two variables is significant, *r*  `r rValue(result$estimate)`, *p* `r pValue(result$p.value)`. 
+
+###Show your graphs
+You add nicely rendered graphs to your text. For that it is important to specify that you want the respected chunk to be included but not echoed. 
+
+```{r include = TRUE, fig.cap = cap}
+ggplot(cars, aes(x = speed, y = dist)) + geom_point() + geom_smooth(method = 'lm') + labs(x = 'Speed in miles per hour', y = 'Stopping distance in feet', title = 'Speed and Stopping Distances of Cars')
+cap <- paste('There is a significant correlation between the speed of a car and the distance it needs to stop, *r*', rValue(result$estimate),  ', *p*' , pValue(result$p.value),'.')
+```
+
+#Writing your text and cite
+The nice thing about RMarkdown is that you can write the whole manuscript with that includes using citations. You can have the standard way of citing at the end of a sentence [@Quent2017a; @Quent2017b]. As @Quent2017a shows, you can also have it that way. Most reference management software (e.g. Zotero or Mendeley) alow you to export the refereneces in BibTeX format. In this case, the references are saved in BibTeX format in the references.bib file. 
 
 # References

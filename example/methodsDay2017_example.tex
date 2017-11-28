@@ -102,21 +102,56 @@ mollit anim id est laborum.
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\section{bla}\label{bla}
+\section{Your fancy formulars}\label{your-fancy-formulars}
 
-\subsection{bla}\label{bla-1}
+You are able to create fancy formulars by innserting LaTex bits
+surrounded by \$ signs. Today, we will use a correlation:
+\[r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}\]
 
-\subsubsection{bla}\label{bla-2}
+\subsection{Analysis}\label{analysis}
 
-(Quent, 2017)
+Use r chunks for your analysis and use the results later.
+
+\subsection{Report your stats}\label{report-your-stats}
+
+The loaded example data give the speed of cars and the distances taken
+to stop. The correlation between these two variables is significant,
+\emph{r} = .807, \emph{p}' \textless{} .001.
+
+\subsubsection{Show your graphs}\label{show-your-graphs}
+
+You add nicely rendered graphs to your text. For that it is important to
+specify that you want the respected chunk to be included but not echoed.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{methodsDay2017_example_files/figure-latex/unnamed-chunk-2-1.pdf}
+\caption{There is a significant correlation between the speed of a car
+and the distance it needs to stop, \emph{r} = .807 , \emph{p}
+\textless{} .001 .}
+\end{figure}
+
+\section{Writing your text and cite}\label{writing-your-text-and-cite}
+
+The nice thing about RMarkdown is that you can write the whole
+manuscript with that includes using citations. You can have the standard
+way of citing at the end of a sentence (Quent, 2017a, 2017b). As Quent
+(2017a) shows, you can also have it that way. Most reference management
+software (e.g.~Zotero or Mendeley) alow you to export the refereneces in
+BibTeX format. In this case, the references are saved in BibTeX format
+in the references.bib file.
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\hypertarget{ref-Quent2017}{}
-Quent, J. A. (2017). This is a title. \emph{Made up journal},
+\hypertarget{ref-Quent2017a}{}
+Quent, J. A. (2017a). This is a title. \emph{Made up journal},
 \emph{1}(1), 1--2.
+
+\hypertarget{ref-Quent2017b}{}
+Quent, J. A. (2017b). This is another title. \emph{Proceedings in world
+of phantasy}, \emph{3}(10), 44--99.
 
 
 \end{document}
