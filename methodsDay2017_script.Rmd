@@ -1,5 +1,5 @@
 ---
-title: "Script for Using RMarkdown to create scientific manuscripts"
+title: "Script for using RMarkdown to create scientific manuscripts"
 author: "Jörn Alexander Quent"
 date: "28 November 2017"
 output: github_document
@@ -28,10 +28,12 @@ Pro:
 Contra:
 
 * Sometimes things go wrong when you try to knit a document to .html file, when it was written to be knit a .pdf file (see workflow). 
-* You will frequently need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com)
+* You will frequently need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
+* List of references are generated at the end of the script. Some journal want to have the figures etc. at the end. 
 
 # RMarkdown workflow
 
 ![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflow.png)
 
 ## Tips and tricks
+* Get the correct citation style form [https://github.com/citation-style-language/styles](https://github.com/citation-style-language/styles).
