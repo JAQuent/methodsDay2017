@@ -12,7 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Introduction
 My aim for this talk is two fold: I want to convince you why you should use RMarkdown and second I want to help you to get started with it. 
 
-What is RMarkdown? It is really is really versatile tool. R is an open source programming language for statistics and data visualisation. It is modular in nature meaning that a lot of different packages can be installed to fit your specific needs. Markdown on the other hand is a so called lightweight markup language, which can be used by you to format your text. It is much easier to use than LaTex for instance. However you are able to knit RMarkdown files to LaTex files but also PDF or word files. You are even able to use LaTex to create mathematical formulars. As you can see here, you are also able to create presentation with RMarkdown. I will focus on scientific manuscripts, though. 
+What is RMarkdown? It is really is really versatile tool. As the name suggests, it combines R and Markdown. R is an open source programming language for statistics and data visualisation. It is modular in nature meaning that a lot of different packages can be installed to fit your specific needs. Markdown on the other hand is a so called lightweight markup language, which can be used by you to format your text. It is much easier to use than LaTex for instance. However you are able to knit RMarkdown files to LaTex files but also PDF or word files. You are even able to use LaTex to create mathematical formulars. As you can see here, you are also able to create presentation with RMarkdown. I will focus on scientific manuscripts, though. 
+
+# RMarkdown workflow
+
+![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflow.png)
 
 ## Pros and cons
 Before I start to show you the *relative ease* with which you can create a scientific manuscript. Let me first elobaroate on pros and cons of RMarkdown.
@@ -32,9 +36,7 @@ Contra:
 * You will frequently need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
 * List of references are generated at the end of the script. Some journal want to have the figures etc. at the end. 
 
-# RMarkdown workflow
 
-![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflow.png)
 
 ## Tips and tricks
 * Get the correct citation style form [https://github.com/citation-style-language/styles](https://github.com/citation-style-language/styles).

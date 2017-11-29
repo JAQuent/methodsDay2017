@@ -10,7 +10,6 @@
 
 
 
-  <meta name="date" content="2017-11-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,7 +30,7 @@
       // Author information
       presenters: [
             {
-        name:  'Joern Alexander Quent' ,
+        name:  'Jörn Alexander Quent' ,
         company: '',
         gplus: '',
         twitter: '',
@@ -95,39 +94,53 @@
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">29 November 2017</p>
+            <p style="margin-top: 6px; margin-left: -2px;">5 December 2017</p>
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>R Markdown</h2></hgroup><article  id="r-markdown">
-
-<p>This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href='http://rmarkdown.rstudio.com' title=''>http://rmarkdown.rstudio.com</a>.</p>
-
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
-
-</article></slide><slide class=""><hgroup><h2>Slide with Bullets</h2></hgroup><article  id="slide-with-bullets">
+<slide class=""><hgroup><h2>Introduction</h2></hgroup><article  id="introduction">
 
 <ul>
-<li>Bullet 1</li>
-<li>Bullet 2</li>
-<li>Bullet 3</li>
+<li>Aims: why RMarkdown and tip/tricks.</li>
+<li>R is an open source programming language for statistics and data visualisation.</li>
+<li>Markdown is a lightweight markup language.</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Slide with R Output</h2></hgroup><article  id="slide-with-r-output">
+</article></slide><slide class=""><hgroup><h2>RMarkdown workflow</h2></hgroup><article  id="rmarkdown-workflow">
 
-<pre class = 'prettyprint lang-r'>summary(cars)</pre>
+<img src='rmarkdown-workflowSmall.png' title='fig:'/><p class='caption'>Taken from <a href='http://bioconnector.org/workshops/r-rmarkdown.html' title=''>http://bioconnector.org/workshops/r-rmarkdown.html</a></p>
 
-<pre >##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</pre>
+</article></slide><slide class=""><hgroup><h2>Pros</h2></hgroup><article  id="pros">
 
-</article></slide><slide class=""><hgroup><h2>Slide with Formula</h2></hgroup><article  id="slide-with-formula">
+<ul>
+<li>Reproducibility: RMarkdown can be used to make scientific analysis more reproducible.</li>
+<li>Track and avoid mistkakes:
 
-<p>\[r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}\]</p></article></slide>
+<ul>
+<li>Rounding p-value,</li>
+<li>Copy &amp; paste,</li>
+<li>Forgetting to up update statistic.</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Contra</h2></hgroup><article  id="contra">
+
+<ul>
+<li>Sometimes things go wrong when you try to knit a document to .html file, when it was written to be knit a .pdf file (see workflow).</li>
+<li>You will frequently need to ask for help for more intricate stuff for instance on <a href='https://stackoverflow.com' title=''>https://stackoverflow.com</a>.</li>
+<li>List of references are generated at the end of the script. Some journal want to have the figures etc. at the end.</li>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Hands on</h2></hgroup><article  id="hands-on">
+
+</article></slide><slide class=""><hgroup><h2>Thank you</h2></hgroup><article  id="thank-you">
+
+<ul>
+<li>If you need help, send me an e-mail Alex.Quent at mrc-cbu.cam.ac.uk.</li>
+<li>Scripts, presentation etc. available on <a href='https://github.com/JAQuent/methodsDay2017' title=''>https://github.com/JAQuent/methodsDay2017</a>.</li>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>End</h2></hgroup><article  id="end"></article></slide>
 
 
   <slide class="backdrop"></slide>

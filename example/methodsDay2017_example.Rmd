@@ -3,37 +3,35 @@ title: "Example for using RMarkdown to create scientific manuscripts"
 author:
 - Jörn Alexander Quent
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+abstract: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+output:
+  pdf_document:
+geometry: "left=3cm,right=2cm,top=2.5cm,bottom=2cm"
+fontsize: 12pt
 header-includes:
    - \usepackage{setspace}
    - \onehalfspacing
-output:
-  pdf_document:
-    keep_tex: yes
-geometry: "left=3cm,right=2cm,top=2.5cm,bottom=2cm"
-fontsize: 12pt
-abstract: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
 toc: yes
-toc_depth: 6
+toc_depth: 3
 bibliography: references.bib
 csl: apa-5th-edition.csl
 ---
 
 ```{r setup, include=FALSE}
 # This r chunk is used to set everything up. You can also analyse your data in here.
-# You need to load everything we need for analysis.
-# This includes the respective libraries
+# You need to load everything you need for analysis in chunks like this one.
+# This includes the respective libraries.
 library(knitr)
 library(ggplot2)
 
-# Here is also the place where you can specify general settings.You need to load the library knitr to that first. 
+# Here is also the place where you can specify general settings.First, you need to load the library knitr to do that, however. The following setting is necessary to create figure captions. 
 opts_knit$set(eval.after = 'fig.cap')
-# The next bit basically specifies that chunks are not echoed and that warnings, messages or plots/tables that are generated in chunk are not shown. 
+# The next bit basically specifies that chunks are not echoed and that warnings, messages or plots/tables that are generated in chunk are not shown unless you specified it. 
 opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, include = FALSE)
-# and of course the data.
+# You will need to load the data of course.
 data('cars')
 # In this case, we will load an example data set.
-
 
 # This chunk is basically a R script. So you are also able to copy your own R function in here to use them. I copied two of my functions (pValue and rValue) in here, which will later help to report the statistics. 
 pValue <-function(x, sign = '='){
@@ -76,9 +74,7 @@ rValue <-function(x){
 # You can do all of the analysis in this chunk, but you don't have to. 
 ```
 
-
-
-# Your fancy formulas
+#Your fancy formulas
 You are able to create fancy formulars by innserting LaTex bits surrounded by $ signs. Today, we will use a correlation:
 $$r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}$$
 
@@ -102,4 +98,4 @@ cap <- paste('There is a significant correlation between the speed of a car and 
 #Writing your text and cite
 The nice thing about RMarkdown is that you can write the whole manuscript with that includes using citations. You can have the standard way of citing at the end of a sentence [@Quent2017a; @Quent2017b]. As @Quent2017a shows, you can also have it that way. Most reference management software (e.g. Zotero or Mendeley) alow you to export the refereneces in BibTeX format. In this case, the references are saved in BibTeX format in the references.bib file. 
 
-# References
+#References

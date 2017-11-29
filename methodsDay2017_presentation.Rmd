@@ -1,6 +1,6 @@
 ---
 title: "Using RMarkdown to create scientific manuscripts"
-author: "Joern Alexander Quent"
+author: "Jörn Alexander Quent"
 date: "5 December 2017"
 output: ioslides_presentation
 css: styles.css
@@ -11,24 +11,32 @@ css: styles.css
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- R is an open source programming language for statistics and data visualisation.
+- Markdown is a lightweight markup language.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+##RMarkdown workflow
 
-## Slide with Bullets
+![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflowSmall.png).
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## Pros 
+* Reproducibility: RMarkdown can be used to make scientific analysis more reproducible. 
+* Track and avoid mistkakes:
+      * Rounding p-value,
+      * Copy & paste,
+      * Forgetting to up update statistic.
 
-## Slide with R Output
+## Contra
+* Sometimes things go wrong when you try to knit a document to .html file, when it was written to be knit a .pdf file (see workflow). 
+* You will frequently need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
+* List of references are generated at the end of the script. Some journal want to have the figures etc. at the end. 
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+# Hands on
 
-## Slide with Formula
+## Thank you
 
-$$r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}$$
+- If you need help, send me an e-mail Alex.Quent at mrc-cbu.cam.ac.uk.
+- Scripts, presentation etc. available on [https://github.com/JAQuent/methodsDay2017](https://github.com/JAQuent/methodsDay2017).
+
+# Questions?
