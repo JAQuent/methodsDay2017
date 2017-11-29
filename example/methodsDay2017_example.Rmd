@@ -89,7 +89,7 @@ result <- cor.test(~ speed + dist, data = cars)
 ```
 
 ##Report your stats
-The loaded example data give the speed of cars and the distances taken to stop. The correlation between these two variables is significant, *r*  `r rValue(result$estimate)`, *p* `r pValue(result$p.value)`. 
+The loaded example data contain the speed of cars and the distances taken to stop. The correlation between these two variables is significant, *r*  `r rValue(result$estimate)`, *p* `r pValue(result$p.value)`. 
 
 ###Show your graphs
 You add nicely rendered graphs to your text. For that it is important to specify that you want the respected chunk to be included but not echoed. 
