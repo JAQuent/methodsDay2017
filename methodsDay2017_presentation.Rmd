@@ -34,6 +34,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Hands on
 
+##YAML
+![YAMl Header](pic1.png).
+
+## R Chunks
+![General setting in R chunk](pic2.png).
+
+##Writing formulas
+![Formular](pic3.png).
+
 ## Thank you
 
 - If you need help, send me an e-mail Alex.Quent at mrc-cbu.cam.ac.uk.
