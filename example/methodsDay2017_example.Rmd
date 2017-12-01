@@ -58,7 +58,6 @@ pValue <-function(x, sign = '='){
   }
   return(x.converted)
 }
-
 rValue <-function(x){
   if (inherits(x, "lm")){
     r.squared <- summary(x)$r.squared
@@ -72,7 +71,6 @@ rValue <-function(x){
   }
   return(x.converted) 
 }
-
 # You can do all of the analysis in this chunk, but you don't have to. 
 ```
 
