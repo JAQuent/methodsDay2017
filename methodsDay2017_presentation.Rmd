@@ -49,9 +49,22 @@ knitr::opts_chunk$set(echo = FALSE)
 ##Graphics
 ![Graphics](pic4_1.png).
 
-
 ##Reporting statistics
-![Statistics](pic4.png).
+![Statistics](pic5.png).
+![Statistics](pic5_1.png).
+
+##Formulas
+![Formula](pic6.png).
+
+##Citation 
+![BibTex file](pic7.png).
+
+##Citation
+![In-text citation](pic8.png).
+
+##Citation
+![In-text citation](pic8_1.png).
+
 
 ## Thank you
 
