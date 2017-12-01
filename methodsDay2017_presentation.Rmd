@@ -40,8 +40,18 @@ knitr::opts_chunk$set(echo = FALSE)
 ## R Chunks
 ![General setting in R chunk](pic2.png).
 
-##Writing formulas
-![Formular](pic3.png).
+##Analysis
+![Analysis](pic3.png).
+
+##Graphics
+![Graphics](pic4.png).
+
+##Graphics
+![Graphics](pic4_1.png).
+
+
+##Reporting statistics
+![Statistics](pic4.png).
 
 ## Thank you
 

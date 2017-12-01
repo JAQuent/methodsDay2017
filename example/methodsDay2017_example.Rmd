@@ -81,7 +81,7 @@ Use r chunks for your analysis and use the results later.
 result <- cor.test(~ speed + dist, data = cars)
 ```
 
-###Show your graphs
+#Show your graphs
 You add nicely rendered graphs to your text. For that it is important to specify that you want the respected chunk to be included but not echoed. 
 
 ```{r include = TRUE, fig.cap = cap}
@@ -92,11 +92,11 @@ cap <- paste('There is a significant correlation between the speed of a car and 
 ##Report your stats
 The loaded example data contain the speed of cars and the distances taken to stop. The correlation between these two variables is significant, *r*  `r rValue(result$estimate)`, *p* `r pValue(result$p.value)`. 
 
-#Writing your text and cite
-The nice thing about RMarkdown is that you can write the whole manuscript with that includes using citations. You can have the standard way of citing at the end of a sentence [@Quent2017a; @Quent2017b]. As @Quent2017a shows, you can also have it that way. Most reference management software (e.g. Zotero or Mendeley) alow you to export the refereneces in BibTeX format. In this case, the references are saved in BibTeX format in the references.bib file. 
-
 #Your fancy formulas
 You are able to create fancy formulars by innserting LaTex bits surrounded by $ signs. Today, we will use a correlation:
 $$r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}$$
+
+#Writing your text and cite
+The nice thing about RMarkdown is that you can write the whole manuscript with that includes using citations. You can have the standard way of citing at the end of a sentence [@Quent2017a; @Quent2017b]. As @Quent2017a shows, you can also have it that way. Most reference management software (e.g. Zotero or Mendeley) alow you to export the refereneces in BibTeX format. In this case, the references are saved in BibTeX format in the references.bib file. 
 
 #References
