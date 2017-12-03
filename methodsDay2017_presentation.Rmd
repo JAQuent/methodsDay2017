@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflowSmall.png).
 
 
+
 ## Pros 
 * Reproducibility: RMarkdown can be used to make scientific analysis more reproducible. 
 * Track and avoid mistakes:
@@ -58,7 +59,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ![Statistics](stats2.png).
 
 ##Formulas
-![Formula](pic6.png).
+![Formula](formula.png).
 
 ##Citation 
 ![BibTex file](references.png).
