@@ -42,10 +42,10 @@ knitr::opts_chunk$set(echo = FALSE)
 ![Analysis](analysis.png).
 
 ##Graphics
-![Graphics](graphics1.png).
+![Graphics](graphic1.png).
 
 ##Graphics
-![Graphics](graphics2.png).
+![Graphics](graphic2.png).
 
 ##Tables
 ![Table](table1.png).
