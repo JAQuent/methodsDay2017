@@ -34,41 +34,39 @@ knitr::opts_chunk$set(echo = FALSE)
 * List of references can only be generated at the end of the script. 
 
 ##YAML header
-![YAMl Header](images/yaml.png).
+![YAMl Header](images/yaml.png)
 
 ## R Chunks
-![General setting in R chunk](images/settings.png).
+![General setting in R chunk](images/settings.png)
 
 ##Analysis
-![Analysis](images/analysis.png).
+![Analysis](images/analysis.png)
 
 ##Reporting statistics
-![Statistics](images/stats1.png).
-![Statistics](images/stats2.png).
+![Statistics](images/stats1.png)
+![Statistics](images/stats2.png)
 
 ##Graphics
-![Graphics](images/graphic1.png).
+![Graphics](images/graphic1.png)
 
 ##Graphics
-![Graphics](images/graphic2.png).
+![Graphics](images/graphic2.png)
 
 ##Tables
-![Table](images/table1.png).
-
-##Tables
-![Table](images/table2.png).
+![Table](images/table1.png)
+![Table](images/table2.png)
 
 ##Formulas
-![Formula](images/formula.png).
+![Formula](images/formula.png)
 
 ##Citation 
-![BibTex file](images/references.png).
+![BibTex file](images/references.png)
 
 ##Citation
-![In-text citation](images/citation1.png).
+![In-text citation](images/citation1.png)
 
 ##Citation
-![In-text citation](images/citation2.png).
+![In-text citation](images/citation2.png)
 
 
 ## Thank you
