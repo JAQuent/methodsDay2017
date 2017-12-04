@@ -2,7 +2,9 @@
 title: "Using RMarkdown to create scientific manuscripts"
 author: "Jörn Alexander Quent"
 date: "5 December 2017"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    fig_caption: true
 css: styles.css
 ---
 
@@ -18,7 +20,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ##RMarkdown workflow
 
-![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflowSmall.png).
+![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflowSmall.png)
+
 
 ## Pros 
 * Reproducibility: RMarkdown can be used to make scientific analysis more reproducible. 
