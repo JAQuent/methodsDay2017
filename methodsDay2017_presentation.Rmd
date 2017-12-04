@@ -16,59 +16,57 @@ knitr::opts_chunk$set(echo = FALSE)
 - Markdown is a lightweight markup language.
 
 ##RMarkdown workflow
-![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflowSmall.png).
+![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](images/rmarkdown-workflowSmall.png)
 
 
-
-## Pros 
-* Reproducibility: RMarkdown can be used to make scientific analysis more reproducible. 
-* Track and avoid mistakes:
-      * Rounding p-value,
-      * Copy & paste,
+##Pros 
+* Easy to share whole code used for analysis with the public and journals.
+* Helps to achieve higher reproducibility with respect to analysis.
+* Many manuscripts contain erroneous statistics (see statcheck; Nuijten et al., 2016).
+* RMarkdown helps to track and avoid mistakes:
+      * Rounding _p_-value,
+      * Copy & paste errors,
       * Forgetting to up update statistic.
-* Easy to share code of analysis with journals or public.
 
-## Contra
-* Sometimes things go wrong when you try to knit a document to .html file, when it was written to be knit a .pdf file (see workflow). 
-* You will frequently need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
-* List of references are generated at the end of the script. Some journal want to have the figures etc. at the end. 
+##Cons
+* Sometimes things might go wrong when you try to switch between output formats (e.g. from .pdf to .html) 
+* You will frequently find yourself that you need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
+* List of references can only be generated at the end of the script. 
 
-##YAML
-![YAMl Header](yaml.png).
+##YAML header
+![](images/yaml.png)
 
 ## R Chunks
-![General setting in R chunk](settings.png).
+![](images/settings.png)
 
 ##Analysis
-![Analysis](analysis.png).
-
-##Graphics
-![Graphics](graphic1.png).
-
-##Graphics
-![Graphics](graphic2.png).
-
-##Tables
-![Table](table1.png).
-
-##Tables
-![Table](table2.png).
+![](images/analysis.png)
 
 ##Reporting statistics
-![Statistics](stats1.png).
-![Statistics](stats2.png).
+![](images/stats1.png)
+![](images/stats2.png)
+
+##Graphics
+![](images/graphic1.png)
+
+##Graphics
+![](images/graphic2.png)
+
+##Tables
+![](images/table1.png)
+![](images/table2.png)
 
 ##Formulas
-![Formula](formula.png).
+![](images/formula.png)
 
 ##Citation 
-![BibTex file](references.png).
+![](images/references.png)
 
 ##Citation
-![In-text citation](citation1.png).
+![](images/citation1.png)
 
 ##Citation
-![In-text citation](citation2.png).
+![](images/citation2.png)
 
 
 ## Thank you
