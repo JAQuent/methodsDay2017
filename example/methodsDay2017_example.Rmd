@@ -92,9 +92,26 @@ cap <- paste('There is a significant correlation between the speed of a car and 
 ##Report your stats
 The loaded example data contain the speed of cars and the distances taken to stop. The correlation between these two variables is significant, *r*  `r rValue(result$estimate)`, *p* `r pValue(result$p.value)`. 
 
-#Your fancy formulas
+###Your fancy formulas
 You are able to create fancy formulars by innserting LaTex bits surrounded by $ signs. Today, we will use a correlation:
 $$r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}$$
+
+#Tables
+With RMarkdown you are also able to produce your tables.
+```{r include = TRUE, results='asis'}
+dataMean <- runif(6, min = 3, max = 4)
+dataSD   <- runif(6, min = 0.1, max = 1)
+
+table1 <- data.frame(Group = c('Control', 'Intervention'),
+                     Parameter1 = paste(round(dataMean[1:2], 2), ' (', round(dataSD[1:2], 2), ')', sep = ''),
+                     Parameter2 = paste(round(dataMean[3:4], 2), ' (', round(dataSD[3:4], 2), ')', sep = ''),
+                     Parameter3 = paste(round(dataMean[5:6], 2), ' (', round(dataSD[5:6], 2), ')', sep = ''))
+      
+names(table1) <- c('Condition', 'Parameter 1', 'Parameter 2', 'Parameter 3')
+
+
+kable(table1, caption = "This is table.")
+```
 
 #Writing your text and cite
 The nice thing about RMarkdown is that you can write the whole manuscript with that includes using citations. You can have the standard way of citing at the end of a sentence [@Quent2017a; @Quent2017b]. As @Quent2017a shows, you can also have it that way. Most reference management software (e.g. Zotero or Mendeley) alow you to export the refereneces in BibTeX format. In this case, the references are saved in BibTeX format in the references.bib file. 
