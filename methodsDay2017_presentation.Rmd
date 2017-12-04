@@ -2,9 +2,7 @@
 title: "Using RMarkdown to create scientific manuscripts"
 author: "Jörn Alexander Quent"
 date: "5 December 2017"
-output: 
-  ioslides_presentation:
-    fig_caption: true
+output: ioslides_presentation
 css: styles.css
 ---
 
@@ -14,63 +12,66 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Introduction
-
 - R is an open source programming language for statistics and data visualisation.
 - Markdown is a lightweight markup language.
 
 ##RMarkdown workflow
+![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflowSmall.png).
 
-![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflowSmall.png)
 
 
 ## Pros 
 * Reproducibility: RMarkdown can be used to make scientific analysis more reproducible. 
-* Track and avoid mistkakes:
+* Track and avoid mistakes:
       * Rounding p-value,
       * Copy & paste,
       * Forgetting to up update statistic.
+* Easy to share code of analysis with journals or public.
 
 ## Contra
 * Sometimes things go wrong when you try to knit a document to .html file, when it was written to be knit a .pdf file (see workflow). 
 * You will frequently need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
 * List of references are generated at the end of the script. Some journal want to have the figures etc. at the end. 
 
-# Hands on
-
 ##YAML
-![YAMl Header](pic1.png).
+![YAMl Header](yaml.png).
 
 ## R Chunks
-![General setting in R chunk](pic2.png).
+![General setting in R chunk](settings.png).
 
 ##Analysis
-![Analysis](pic3.png).
+![Analysis](analysis.png).
 
 ##Graphics
-![Graphics](pic4.png).
+![Graphics](graphic1.png).
 
 ##Graphics
-![Graphics](pic4_1.png).
+![Graphics](graphic2.png).
+
+##Tables
+![Table](table1.png).
+
+##Tables
+![Table](table2.png).
 
 ##Reporting statistics
-![Statistics](pic5.png).
-![Statistics](pic5_1.png).
+![Statistics](stats1.png).
+![Statistics](stats2.png).
 
 ##Formulas
-![Formula](pic6.png).
+![Formula](formula.png).
 
 ##Citation 
-![BibTex file](pic7.png).
+![BibTex file](references.png).
 
 ##Citation
-![In-text citation](pic8.png).
+![In-text citation](citation1.png).
 
 ##Citation
-![In-text citation](pic8_1.png).
+![In-text citation](citation2.png).
 
 
 ## Thank you
-
 - If you need help, send me an e-mail Alex.Quent at mrc-cbu.cam.ac.uk.
 - Scripts, presentation etc. available on [https://github.com/JAQuent/methodsDay2017](https://github.com/JAQuent/methodsDay2017).
 
