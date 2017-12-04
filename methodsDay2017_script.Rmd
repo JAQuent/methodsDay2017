@@ -1,42 +1,56 @@
 ---
 title: "Script for using RMarkdown to create scientific manuscripts"
 author: "Jörn Alexander Quent"
-date: "28 November 2017"
+date: "5 December 2017"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-## Introduction
-My aim for this talk is two fold: I want to convince you why you should use RMarkdown and second I want to help you to get started with it.
+#Welcome
+It is great honour for me to be able to talk to you about using RMarkdown to create scientific manuscripts. My aim today is to convince you to use RMarkdown and to show to you how easy it is to create a very neat document whit it. I think it is a really versatile tool. As a side note, you don't need to write down anything basically because everything is uploaded to my GitHub account. Before starting let me present to you the end product. This is an example script I generate for you.
 
-What is RMarkdown? It is really is really versatile tool. As the name suggests, it combines R and Markdown. R is an open source programming language for statistics and data visualisation. It is modular in nature meaning that a lot of different packages can be installed to fit your specific needs. Markdown on the other hand is a so called lightweight markup language, which can be used by you to format your text. It is much easier to use than LaTex for instance. However you are able to knit RMarkdown files to LaTex files but also PDF or word files. You are even able to use LaTex to create mathematical formulas. As you can see here, you are also able to create presentation with RMarkdown. I will focus on scientific manuscripts, though. 
+# Introduction
+So, what is RMarkdown? . As the name suggests, it combines R and Markdown. R, as you probably know, is an open source programming language for statistics and data visualisation. Markdown on the other hand is a so called lightweight markup language. You can use those languages to format your text. Being lightweight means that it is much easier to use than LaTex for instance. That being said you are still able to knit RMarkdown files to LaTex files but also to PDF or to Word files. You are even able to use LaTex to create mathematical formulas. And as you can see here, you are also able to create presentation with RMarkdown. I will focus on scientific manuscripts, though. 
 
 # RMarkdown workflow
+![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](images/rmarkdown-workflow.png)
 
-![Taken from http://bioconnector.org/workshops/r-rmarkdown.html](rmarkdown-workflow.png)
 
-## Pros and cons
-Before I start to show you the *relative ease* with which you can create a scientific manuscript. Let me first elobaroate on pros and cons of RMarkdown.
+Before I continue to talk about the pro and cons of using RMarkdown, I want to spend just one slide to explain to you how RMarkdown works. In RStudio you'll work on your RMarkdown file (.Rmd), where you combine chunks of R code with your text. This file is knit with the help of the R package *knitr* to a Markdown file, which then is converted via Pandoc and LaTex to the final output format, which can be .html, .pdf or .docx.
 
-Pro:
-Nuijten et al. (2016) found that a lot of scientific papers contained erroneous statistics. 
-* Reproducibility: RMarkdown can be used to make scientific analysis more reproducible. You will this easily why this the case in the short demonstration. 
-* Track and avoid mistakes
-      * Rounding p-value
-      * Copy & paste errors
-      * Stat check
-      * Forgetting to up update a particular statistic.
+# Pros
+Why using RMarkdown at all? I would say that the main advantage of using RMarkdown lays in the fact that you can share the whole code used for analysis with the public and journals alongside  the text. The other main advantage is that it will help you to achieve higher reproducibility when it come to the analysis. In this context, Nuijten et al. (2006) showed that as many as half of all manuscripts they looked at contained erroneous statistics. RMarkdown helps you to track and avoid mistakes in rounding *p*-values, copy & paste errors as well as forgetting to update statistics when you for instance add a new participant to your data set.
       
-Contra:
+#Cons
+I have to admit to you that are also minor disavantages. Due to the workflow sometimes things might go wrong when you try to switch between output formats (e.g. from .pdf to .html). You also will find yourself asking for help a couple of times for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com). But don't worry, people are very supportive there. Another annoying thing is that the list of references can only be generated at the end of the script. 
 
-* Sometimes things go wrong when you try to knit a document to .html file, when it was written to be knit a .pdf file (see workflow). 
-* You will frequently need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
-* List of references are generated at the end of the script. Some journal want to have the figures etc. at the end. 
+#YAML header
+With that being said, now it is time to show you how little it takes to generate a neat looking manuscript.You always start with an YAML header, which you can see here. In that header you specify a lot concerning the title page and the general layout. For instance the title, author and the abstract, but also the spacing between the lines. You can use the system time as the date. What really important is that you can provide a BibTex file that includes the information used for citation.
+
+#R chunks
+What you see here is the R chunk that follows the header, in which you can load everything you need such as libraries and data. An R chunk is always started with three back quotes ("`") followed by the letter r in curly brackets sometimes with additional specifications. An R chunk is again ended by three additional back quote.
+
+#Analysis
+In those chunks you can analysis your data and save the results in variables, which can later can be used to access the statistical parameters such as the *p*-values.
+
+#Reporting statistics
+You can see an example of that here, where I used the function *rValue* and *pValue* that I wrote to extract and round correlation coefficients and *p*-values and report them in the text. With that you will never to a rounding error again and you will be more consistent in what you are doing. 
+
+#Graphics
+RMarkdown is also great to render your graphical figures alongside your text. With just a few lines of code as you can see here, you can get to a nice output like this. Note that you can use your result variables to access stuff like the *p*-value.
+
+#Tables
+Similarly, you only need a few lines of code to create tables, which you can use for publication. I find the function *kable* very useful for that but there other ones. 
+
+#Formulas
+Another great asset is that you can use LaTex formulas and symbols (e.g. Greek ones) and display them. These are by the way shown while you write them in RStudio. 
+
+#Citation
+The last point I want to show you that it is quite easy to use BibTex file to cite articles in your text. Here you see an example file I made up, but most programs such as Mendeley or Zotero have an export function that you can use. With the ID here, you are able to cite this item in your text. Either in round brackets or directly in the text. The list of references is then added at the end of the document. 
 
 
+#Thank you
+Let me end by thanking you for your attention. Hopefully, I convinced some of you to try and use RMarkdown. You can use the example script as a starting point but feel we to ask me. Maybe I am able to help. In any case, everything I used for that talk can be found on my GitHub account.
 
-## Tips and tricks
-* Get the correct citation style form [https://github.com/citation-style-language/styles](https://github.com/citation-style-language/styles).
+#Extra advice
+Get the correct citation style form [https://github.com/citation-style-language/styles](https://github.com/citation-style-language/styles).
