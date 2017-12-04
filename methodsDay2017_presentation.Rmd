@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = FALSE)
       * Forgetting to up update statistic.
 
 ##Cons
-* Sometimes things might go wrong when you try to switch between output formats (e.g. from .pdf to .html) 
+* Sometimes things might go wrong when you try to switch between output formats (e.g. from .pdf to .html).
 * You will frequently find yourself that you need to ask for help for more intricate stuff for instance on [https://stackoverflow.com](https://stackoverflow.com).
 * List of references can only be generated at the end of the script. 
 
