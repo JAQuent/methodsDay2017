@@ -6,12 +6,12 @@ Jörn Alexander Quent
 Welcome
 =======
 
-It is great honour for me to be able to talk to you about using RMarkdown to create scientific manuscripts. My aim today is to convince you to use RMarkdown and to show to you how easy it is to create a very neat document whit it. I think it is a really versatile tool. As a side note, you don't need to write down anything basically because everything is uploaded to my GitHub account. Before starting let me present to you the end product. This is an example script I generate for you.
+It is great honour for me to be able to talk to you about using RMarkdown to create scientific manuscripts. My aim today is to convince you to use RMarkdown and to show to you how easy it is to create a very neat document with it. As side note, don't bother to write down any code. It is all updated on my GitHub. Before starting let me present to you the end product. This is an example script I generate for you.
 
 Introduction
 ============
 
-So, what is RMarkdown? . As the name suggests, it combines R and Markdown. R, as you probably know, is an open source programming language for statistics and data visualisation. Markdown on the other hand is a so called lightweight markup language. You can use those languages to format your text. Being lightweight means that it is much easier to use than LaTex for instance. That being said you are still able to knit RMarkdown files to LaTex files but also to PDF or to Word files. You are even able to use LaTex to create mathematical formulas. And as you can see here, you are also able to create presentation with RMarkdown.
+So, what is RMarkdown? . As the name suggests, it combines R and Markdown. R, as you probably know, is an open source programming language for statistics and data visualisation. Markdown on the other hand is a so called lightweight markup language. You can use those languages to format your text. Being lightweight means that it is much easier to use than LaTex for instance. That being said you are still able to knit RMarkdown files to LaTex files. You are even able to use LaTex to create mathematical formulas. And as you can see here, you are also able to create presentation with RMarkdown.
 
 RMarkdown workflow
 ==================
@@ -23,12 +23,12 @@ Before I continue to talk about the pro and cons of using RMarkdown, I want to s
 Pros
 ====
 
-Why using RMarkdown at all? I would say that the main advantage of using RMarkdown lays in the fact that you can share the whole code used for analysis with the public and journals alongside the text. The other main advantage is that it will help you to achieve higher reproducibility when it come to the analysis. In this context, Nuijten et al. (2006) showed that as many as half of all manuscripts they looked at contained erroneous statistics. RMarkdown helps you to track and avoid mistakes in rounding *p*-values, copy & paste errors as well as forgetting to update statistics when you for instance add a new participant to your data set.
+Why using RMarkdown at all? I would say that the main advantage of using RMarkdown lays in the fact that you can share the whole code used for analysis with the public and journals alongside the text. The other main advantage is that it will help you to achieve higher reproducibility when it come to the analysis. In this context, Nuijten et al. (2016) showed that as many as half of all manuscripts they looked at contained erroneous statistics. RMarkdown helps you to track and avoid mistakes in rounding *p*-values, copy & paste errors as well as forgetting to update statistics when you for instance add a new participant to your data set.
 
 Cons
 ====
 
-I have to admit to you that are also minor disavantages. Due to the workflow sometimes things might go wrong when you try to switch between output formats (e.g. from .pdf to .html). You also will find yourself asking for help a couple of times for more intricate stuff for instance on <https://stackoverflow.com>. But don't worry, people are very supportive there. Another annoying thing is that the list of references can only be generated at the end of the script.
+I have to admit to you that are also minor disadvantages. Due to the workflow sometimes things might go wrong when you try to switch between output formats (e.g. from .pdf to .html). You also will find yourself asking for help a couple of times for more intricate stuff for instance on <https://stackoverflow.com>. But don't worry, people are very supportive there. Another annoying thing is that the list of references can only be generated at the end of the script.
 
 YAML header
 ===========
@@ -68,12 +68,12 @@ Another great asset is that you can use LaTex formulas and symbols (e.g. Greek o
 Citation
 ========
 
-The last point I want to show you that it is quite easy to use BibTex file to cite articles in your text. Here you see an example file I made up, but most programs such as Mendeley or Zotero have an export function that you can use. With the ID here, you are able to cite this item in your text. Either in round brackets or directly in the text. The list of references is then added at the end of the document.
+The last point I want to show you that it is quite easy to use BibTex file to cite articles in your text. Here you see an example file I made up, but most programs such as Mendeley or Zotero have an export function that you can use. With the ID here, you are able to cite this item in your text. Either in everything brackets or directly in the text with only the year in brackets. The list of references is then added at the end of the document.
 
 Thank you
 =========
 
-Let me end by thanking you for your attention. Hopefully, I convinced some of you to try and use RMarkdown. You can use the example script as a starting point but feel we to ask me. Maybe I am able to help. In any case, everything I used for that talk can be found on my GitHub account.
+I hope that you got an impression of the versatility of RMardown and I also hope I convinced some of you to try and use RMarkdown. You can use the example script as a starting point but feel we to ask me. Maybe I am able to help. In any case, everything I used for that talk can be found on my GitHub account.
 
 Extra advice
 ============
