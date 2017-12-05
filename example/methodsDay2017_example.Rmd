@@ -88,7 +88,7 @@ You can directly render your figures alongside your text. For that it is importa
 ```{r include = TRUE, fig.cap = cap}
 corrPlot <- ggplot(cars, aes(x = speed, y = dist)) + geom_point() + geom_smooth(method = 'lm') + labs(x = 'Speed in miles per hour', y = 'Stopping distance in feet', title = '(A) Correlation')
 
-histPlot <- ggplot(cars, aes(x = speed)) + geom_histogram(bins = 10) + labs(x = 'Speed in miles per hour', y = 'Number of cases', title = '(B) Histrogram of speed')
+histPlot <- ggplot(cars, aes(x = speed)) + geom_histogram(bins = 10) + labs(x = 'Speed in miles per hour', y = 'Number of cases', title = '(B) Histogram of speed')
 
 grid.arrange(corrPlot, histPlot, ncol = 2)
 
